@@ -1,0 +1,14 @@
+Below is a list of sample files for the Option Quotes product available on Cboe DataShop (https://datashop.cboe.com/)
+
+The Option Quote intervals data is customizable, there are several possible formats based on whether customers choose to Include Open Interest, Calcs, or a combination.
+
+1) Selected "Include" for Open Interest + Calcs for 30-minute intervals, please see:  UnderlyingOptionsIntervals_1800sec_calcs_oi_2021-04-26.zip
+
+2) Selected "Include" for Open Interest only for 30-minute intervals, please see:  UnderlyingOptionsIntervals_1800sec_oi_2021-04-26.zip
+
+3) Selected "Include" for Calcs only for 30-minute intervals, please see:  UnderlyingOptionsIntervals_1800sec_calcs_2021-04-26.zip
+
+4) Selected "Not Include" for Open Interest + Calcs for 30-minute intervals, please see:  UnderlyingOptionsIntervals_1800sec_2021-04-26.zip
+
+5) For Subscriptions only, if the expedited "Intraday" Delivery Time is selected with "Include" selected for Open Interest + Calcs for 1-minute intervals, please see:  UnderlyingOptionsIntervals_60sec_calcs_oi_2022-02-02_0939.zip
+   For "Intraday" deliveries, there are files per interval per day (A minimum 15-minute delay prior to delivering the prior interval).

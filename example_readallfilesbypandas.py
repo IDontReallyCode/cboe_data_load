@@ -5,7 +5,8 @@ import time
 import os
 from datetime import datetime
 import numpy as np
-from sqlstuff import GET_ALL_RF
+from privatestuff import SQL_CONNECT
+import psycopg2
 
 # Define function to convert 'c' to 0 and 'p' to 1
 def convert_c_p(value):
@@ -13,6 +14,42 @@ def convert_c_p(value):
         return 0
     elif value == 'p':
         return 1
+
+
+
+def GET_ALL_RF():
+    """
+    Retrieves all records from the 'tbill' table in the SQL database.
+    
+    Returns:
+    - rfstuff: A list of tuples containing the fetched data from the 'tbill' table.
+    
+    Example usage:
+    rf_data = GET_ALL_RF()
+    for row in rf_data:
+        print(row)
+    """
+    # Establish a connection to the SQL database
+    cnxn = SQL_CONNECT()
+
+    # Create a cursor object to execute SQL queries
+    cursor = cnxn.cursor()
+
+    # SQL query to select all records from the 'tbill' table
+    query = "SELECT * from tbill"
+
+    # Execute the SQL query
+    cursor.execute(query)
+
+    # Fetch all the records from the query result
+    rfstuff = cursor.fetchall()
+
+    # Close the cursor and the database connection
+    cursor.close()
+    cnxn.close()
+
+    # Return the fetched data
+    return rfstuff
 
 
 def main():
